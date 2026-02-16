@@ -1,0 +1,102 @@
+.scroll-stack-container {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-stack-card {
+  transform-origin: top center;
+  will-change: transform;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+  height: 14rem;
+  width: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Even card gradient — #8B8DFF */
+.step-card-gradient {
+  background: linear-gradient(to right,
+      rgba(139, 141, 255, 0.95) 0%,
+      rgba(139, 141, 255, 0.85) 30%,
+      rgba(139, 141, 255, 0.5) 60%,
+      rgba(139, 141, 255, 0.15) 85%,
+      transparent 100%);
+}
+
+/* Odd card gradient — #E44DFF */
+.step-card-gradient-white {
+  background: linear-gradient(to right,
+      rgba(228, 77, 255, 0.95) 0%,
+      rgba(228, 77, 255, 0.85) 30%,
+      rgba(228, 77, 255, 0.5) 60%,
+      rgba(228, 77, 255, 0.15) 85%,
+      transparent 100%);
+}
+
+.step-card-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.step-card-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+
+.step-card-description {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .scroll-stack-card {
+    height: 18rem;
+    border-radius: 30px;
+    margin-bottom: 1.75rem;
+  }
+
+  .step-card-label {
+    font-size: 1.4rem;
+  }
+
+  .step-card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .step-card-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .scroll-stack-card {
+    height: 22rem;
+    border-radius: 40px;
+    margin-bottom: 2rem;
+  }
+
+  .step-card-label {
+    font-size: 1.8rem;
+  }
+
+  .step-card-subtitle {
+    font-size: 1rem;
+  }
+
+  .step-card-description {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Check if the user is accessing their own document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Allow reading any user profile
+      allow read: if true;
+      
+      // Allow creation if authenticated and strict validation
+      allow create: if isAuthenticated() 
+                    && request.resource.data.uid == request.auth.uid
+                    && request.resource.data.keys().hasAll(['username', 'email', 'createdAt']);
+
+      // Allow updates only by the owner
+      // Exception: Allow authenticated users to update the 'aura' field (for giving aura)
+      allow update: if isOwner(userId) 
+                    || (isAuthenticated() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['aura']));
+      
+      // Aura Subcollection - records who gave aura
+      match /auraGiven/{giverId} {
+        // Anyone can read aura patterns
+        allow read: if true;
+        // Authenticated users can write their own ID as having given aura
+        allow write: if isAuthenticated() && request.auth.uid == giverId;
+      }
+    }
+    
+    // Enforce username uniqueness implies we need a way to check it.
+    // In strict rules, we often use a separate 'usernames' collection to map username -> uid
+    // But for this MVP, we are querying users by username in the client.
+    // To strictly enforce distinct usernames via rules is hard without a separate collection.
+    // We rely on client-side check + transactional creation or Cloud Functions for robustness.
+  }
+}

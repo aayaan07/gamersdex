@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎮 GamersDex
 
-## Getting Started
+GamersDex is a modern gaming profile platform where players can showcase their gaming journey, track completed titles, earn ranks, and gain community recognition through Aura.
 
-First, run the development server:
+It’s designed to be a clean, minimal, and performance-focused space for gamers who want a public identity beyond traditional social media.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 What is GamersDex?
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+GamersDex is a public gamer identity system.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Instead of just playing games, you build a profile that represents:
+- Your completed games
+- Your current playthroughs
+- Your wishlist
+- Your progression rank
+- Your reputation (Aura)
 
-## Learn More
+Each user gets a unique, shareable profile link:
 
-To learn more about Next.js, take a look at the following resources:
+https://gamersdex.vercel.app/yourusername
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Think of it as a Pokédex — but for gamers.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Why GamersDex?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Most gaming platforms focus on:
+- Multiplayer stats
+- Competitive rankings
+- Game stores
+
+GamersDex focuses on:
+- Personal gaming journey
+- Public gamer identity
+- Clean aesthetic profiles
+- Community recognition
+
+It’s built to be:
+- Simple
+- Fast
+- Secure
+- Modern
+
+No clutter. No unnecessary features. Just your gaming story.
+
+---
+
+## 🏆 Core Ideas
+
+- 🎮 Track the games you've completed
+- 📈 Earn ranks based on your progress
+- ✨ Receive Aura from other players
+- 👤 Own a unique gamer identity
+- 🔗 Share your public profile anywhere
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js (App Router)
+- Tailwind CSS
+- Firebase Authentication
+- Firestore Database
+- Vercel Deployment
+
+---
+
+## 🚀 Vision
+
+GamersDex aims to evolve into a universal gamer profile system — a place where your gaming history becomes part of your digital identity.
+
+Future ideas may include:
+- Advanced stat tracking
+- Game discovery
+- Social interactions
+- Seasonal leaderboards
+- Community features
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome.
+
+If you'd like to improve GamersDex:
+- Open an issue
+- Suggest features
+- Submit a pull request
+- Report bugs
+
+Let’s build something cool for gamers.
+
+---
+
+## License
+
+© 2026 GamersDex. All Rights Reserved.
+
+This project and its source code may not be copied, modified, distributed, or used without explicit permission from the author.
