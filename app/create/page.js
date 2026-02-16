@@ -213,7 +213,7 @@ export default function CreateProfile() {
     // Helper: Fetch games from RAWG
     const fetchGames = async (query) => {
         if (!query) return [];
-        const apiKey = process.env.NEXT_PUBLIC_RAWG_API_KEY;
+        const apiKey = process.env.RAWG_API_KEY;
         const res = await fetch(`https://api.rawg.io/api/games?key=${apiKey}&search=${query}&page_size=5`);
         const data = await res.json();
         return data.results || [];
