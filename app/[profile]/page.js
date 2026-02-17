@@ -384,12 +384,12 @@ export default function ProfilePage({ params }) {
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {completedGames.length > 0 ? completedGames.map((game, i) => (
                             <div key={i} className="aspect-[3/4] rounded-xl overflow-hidden relative group border border-white/5 bg-[#1a1c2e]">
-                                <div className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                <div className="absolute inset-0 bg-cover bg-center opacity-100 lg:opacity-80 lg:group-hover:opacity-100 transition-opacity duration-300"
                                     style={{
                                         backgroundImage: `url('${game.background_image || game.coverImage}')`
                                     }}>
                                 </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
                                     <span className="text-xs font-bold text-white line-clamp-2">{game.name || game.title}</span>
                                 </div>
                             </div>
@@ -407,12 +407,12 @@ export default function ProfilePage({ params }) {
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {wishlistGames.length > 0 ? wishlistGames.map((game, i) => (
                             <div key={i} className="aspect-[3/4] rounded-xl overflow-hidden relative group border border-white/5 bg-[#1a1c2e]">
-                                <div className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                                <div className="absolute inset-0 bg-cover bg-center opacity-100 lg:opacity-90 lg:group-hover:opacity-100 transition-opacity duration-300"
                                     style={{
                                         backgroundImage: `url('${game.background_image || game.coverImage}')`
                                     }}>
                                 </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
                                     <span className="text-xs font-bold text-white line-clamp-2">{game.name || game.title}</span>
                                 </div>
                             </div>
@@ -430,12 +430,12 @@ export default function ProfilePage({ params }) {
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {droppedGames.length > 0 ? droppedGames.map((game, i) => (
                             <div key={i} className="aspect-[3/4] rounded-xl overflow-hidden relative group border border-white/5 bg-[#1a1c2e]">
-                                <div className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                <div className="absolute inset-0 bg-cover bg-center opacity-100 lg:opacity-80 lg:group-hover:opacity-100 transition-opacity duration-300"
                                     style={{
                                         backgroundImage: `url('${game.background_image || game.coverImage}')`
                                     }}>
                                 </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
                                     <span className="text-xs font-bold text-white line-clamp-2">{game.name || game.title}</span>
                                 </div>
                             </div>
