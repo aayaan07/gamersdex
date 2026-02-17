@@ -61,7 +61,7 @@ const GameCard = ({ game, category, onRemove }) => (
             alt={game.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
             <span className="text-white font-poppins text-sm font-medium line-clamp-2">
                 {game.name}
             </span>
@@ -610,7 +610,7 @@ export default function CreateProfile() {
                                                     <h4 className="text-white font-medium text-sm">{game.name}</h4>
                                                     <span className="text-white/40 text-xs">{game.released?.split('-')[0]}</span>
                                                 </div>
-                                                <div className="flex items-center gap-1">
+                                                <div className="flex flex-wrap gap-1 justify-end mt-2 sm:mt-0">
                                                     <button onClick={() => handleAddGame('playing', game)} className="text-[10px] sm:text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded hover:bg-blue-500/40 transition">Playing</button>
                                                     <button onClick={() => handleAddGame('completed', game)} className="text-[10px] sm:text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded hover:bg-green-500/40 transition">Completed</button>
                                                     <button onClick={() => handleAddGame('wishlist', game)} className="text-[10px] sm:text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded hover:bg-purple-500/40 transition">Wishlist</button>
