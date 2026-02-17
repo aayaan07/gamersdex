@@ -106,6 +106,7 @@ export default function CreateProfile() {
         if (!authLoading) {
             if (!user) {
                 router.push("/");
+                alert("Sign In to continue...");
             } else if (userData?.username) {
                 // Pre-fill for editing
                 setProfileData({
